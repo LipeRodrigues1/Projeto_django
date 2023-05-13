@@ -1,19 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse
-
-
-def my_view(request):
-    return HttpResponse('Uma pagina sobre view')
-
-
-def void(request):
-    return HttpResponse('Essa é a pagina inicial')
+from django.urls import path, include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('view/', my_view),
-    path('', void),
-        
+    path('admin/', admin.site.urls),  # dominio.com/admin
+    path('', include('app_recipes.urls')),  # dominio.com
 ]
