@@ -3,7 +3,7 @@ from app_recipes.views import my_home, sobre, contato
 
 
 urlpatterns = [
-    path('', my_home),
+    path('', my_home),  # dominio.com
     path('sobre/', sobre),  # dominio.com/sobre/
     path('contato/', contato),  # dominio.com/contato/
 ]
