@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def my_home(request):
-    return render(request, 'home.html', context={
+    return render(request, 'recipes/home.html', context={
         'name': 'Fellipe Augusto'
     })
 
@@ -13,7 +13,7 @@ def sobre(resquest):
 
 
 def contato(request):
-    return HttpResponse('(81) 996018125')
+    return render(request, 'recipes/contato.html')
 
 
 # Create your views here.
